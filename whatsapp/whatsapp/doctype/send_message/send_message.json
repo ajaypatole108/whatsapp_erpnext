@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-05 16:19:05.961790",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "message_send_to",
+  "column_break_xazbi",
+  "when_to_send",
+  "schedule_date_and_time",
+  "section_break_zzgcx",
+  "group",
+  "section_break_bz386",
+  "message_details_section",
+  "message_template",
+  "message",
+  "column_break_dbfx9",
+  "send_message_variable",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "message_send_to",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Message Send To",
+   "options": "Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xazbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "when_to_send",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "When To Send",
+   "options": "Now\nSchedule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zzgcx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Group"
+  },
+  {
+   "fieldname": "section_break_bz386",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "message_details_section",
+   "fieldtype": "Section Break",
+   "label": "Message Details"
+  },
+  {
+   "fieldname": "message_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Message Template",
+   "options": "Template Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message"
+  },
+  {
+   "fieldname": "column_break_dbfx9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Send Message",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "send_message_variable",
+   "fieldtype": "Table",
+   "label": "Send Message Variable",
+   "options": "Send Message Variable"
+  },
+  {
+   "depends_on": "eval: doc.when_to_send == 'Schedule'",
+   "fieldname": "schedule_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Schedule Date And Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-05 16:39:54.694044",
+ "modified_by": "Administrator",
+ "module": "Whatsapp",
+ "name": "Send Message",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}
